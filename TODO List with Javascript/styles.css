@@ -1,12 +1,13 @@
-/* Dark mode styling */
+/* 🌙 Beautiful Dark Mode To-Do List */
 * {
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #121212;
+  background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
   color: #f5f5f5;
   display: flex;
   align-items: center;
@@ -14,35 +15,43 @@ body {
   height: 100vh;
 }
 
+/* 🧊 Glassmorphism container */
 .container {
   width: 90%;
-  max-width: 400px;
-  background-color: #1e1e1e;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  max-width: 420px;
+  background: rgba(30, 30, 30, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 25px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.6s ease forwards;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
+/* 🔹 Input Section */
 .input-container {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #todo-input {
   flex: 1;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #2a2a2a;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background-color: rgba(45, 45, 45, 0.9);
   color: #fff;
   outline: none;
+  font-size: 14px;
 }
 
 #todo-input::placeholder {
@@ -50,19 +59,22 @@ h1 {
 }
 
 #add-task-btn {
-  background-color: #00adb5;
+  background: linear-gradient(135deg, #00adb5, #08d9d6);
   color: #fff;
   border: none;
-  border-radius: 5px;
-  padding: 10px 15px;
+  border-radius: 8px;
+  padding: 12px 18px;
   cursor: pointer;
-  transition: 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 173, 181, 0.3);
 }
 
 #add-task-btn:hover {
-  background-color: #08d9d6;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(8, 217, 214, 0.5);
 }
 
+/* 📝 Task List */
 ul {
   list-style: none;
   padding: 0;
@@ -70,31 +82,52 @@ ul {
 }
 
 li {
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  border-radius: 5px;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: rgba(50, 50, 50, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.3s;
+  cursor: pointer;
+}
+
+li:hover {
+  background: rgba(60, 60, 60, 0.9);
 }
 
 li.completed {
   text-decoration: line-through;
-  color: #888;
-  opacity: 0.7;
+  color: #999;
+  opacity: 0.6;
 }
 
+/* ❌ Delete Button */
 .delete-btn {
-  background: transparent;
+  background-color: #ff3b5c;
   border: none;
-  background-color: #ff5555;
+  border-radius: 6px;
+  color: #fff;
   cursor: pointer;
-  font-size: 14px;
-  transition: 0.2s;
-  padding: 5px;
+  font-size: 13px;
+  padding: 6px 8px;
+  transition: all 0.2s ease;
 }
 
 .delete-btn:hover {
-  color: #ff7777;
+  background-color: #ff5c7a;
+  transform: scale(1.1);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
