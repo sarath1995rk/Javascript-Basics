@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Page Styling */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container */
+.container {
+  background: #ffffff;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 20px;
+  color: #4a4a4a;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+h3 {
+  color: #444;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(118, 75, 162, 0.4);
+}
+
+/* Expense List */
+ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 10px;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul li {
+  background: #f6f6f6;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  border-left: 5px solid #667eea;
+}
+
+/* Total Section */
+#total {
+  margin-top: 25px;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+#total-amount {
+  color: #667eea;
+  font-weight: bold;
+}
